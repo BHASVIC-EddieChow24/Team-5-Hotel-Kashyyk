@@ -25,7 +25,7 @@ int main(void) {
                 fflush(stdin);
                 gets(name1);
                 if(strlen(name1)>10){
-                    printf("name is tool long\n");
+                    printf("name is too long\n");
                 }
             }while(strlen(name1)<1||strlen(name1)>10);
             do {
@@ -40,11 +40,17 @@ int main(void) {
                 printf("Enter your date of birth (ddmmyy):");
                 fflush(stdin);
                 scanf("%d", &dob);
-            }while(dob>1000000||dob<99999);
+            }while(dob>1000000||dob<010100);
             do {
                 printf("Enter your age:");
                 fflush(stdin);
                 scanf("%d", &age);
+                if(age>120) {
+                    printf("You're too old!");
+                }
+                else if(age<2) {
+                    printf("You're too young!");
+                }
             }while(age<2||age>120);
             do {
                 printf("How many adults are there? (17 or above):");
@@ -55,12 +61,18 @@ int main(void) {
                 printf("How many children are there? (16 or below):");
                 fflush(stdin);
                 scanf("%d", &children[count]);
+                if(adults[count]+children[count]>4) {
+                    printf("Maximum people per room is 4 \n");
+                }
             }while(adults[count]+children[count]>4||children[count]<0);
             do
             {
                 printf("Are you looking to get Full Board, Half Board, or Bed and Breakfast? (F, H, or B):");
                 fflush(stdin);
                 scanf("%c", &type[count]);
+                if(type[count]!='F'&& type[count] !='H'&&type[count]!='B' && type[count]!= 'f'&& type[count] !='h'&&type[count]!='b') {
+                    printf("Invalid answer. \n");
+                }
             }while(type[count]!='F'&& type[count] !='H'&&type[count]!='B' && type[count]!= 'f'&& type[count] !='h'&&type[count]!='b');
 
             do
@@ -68,7 +80,10 @@ int main(void) {
                 printf("How long are you staying? (days):");
                 fflush(stdin);
                 scanf("%d", &staylength[count]);
-            }while(staylength[count]<1 || staylength[count]>29);
+                if(staylength[count]<1 || staylength[count]>30) {
+                    printf("Minimum stay length is 1 day. \nMaximum stay length is 30 days. \n");
+                }
+            }while(staylength[count]<1 || staylength[count]>30);
             do
             {
                 printf("Would you like to recieve a paper? (Y/N):");
@@ -154,7 +169,7 @@ int main(void) {
                         scanf("%d", &tablerequest);
                             if(tables7[tablerequest-1] > 6) {
                                 tables7[tablerequest-1] = idnum;
-                                printf("Table %d booked for 7", tablerequest);
+                                printf("Table %d booked for 7 \n", tablerequest);
                             }
                 }
                     else if (time == 9) {
@@ -163,7 +178,7 @@ int main(void) {
                         scanf("%d", &tablerequest);
                         if(tables9[tablerequest-1] > 6) {
                             tables9[tablerequest-1] = idnum;
-                            printf("Table %d booked for 9", tablerequest);
+                            printf("Table %d booked for 9 \n", tablerequest);
                         }
                         else {
                             printf("This table is not valid, sorry.");
