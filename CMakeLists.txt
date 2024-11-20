@@ -3,5 +3,4 @@ project(Team_5_Hotel_Kashyyk C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Team_5_Hotel_Kashyyk
-        maincode.c)
+add_executable(Team_5_Hotel_Kashyyk "maincode.c")

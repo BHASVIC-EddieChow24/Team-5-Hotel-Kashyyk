@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+void calculateprice();
 
 int main(void) {
     int option = 4, rooms[6], count = -1;
@@ -9,6 +10,9 @@ int main(void) {
     rooms[3] = (75);
     rooms[4] = (75);
     rooms[5] = (50);
+    int dob,age, adults[6], children[6], staylength[6], choice[6];
+    float mealtotal[6], roomtotal[6], total;
+    char name1[6][10], name2[10], type[6], paper[6];
     while(option == 4) {
         printf("What would you like to do?\nCheck in (1)\nBook a table (2)\nCheck out (3)\nQuit (4)\nAnswer:");
         fflush(stdin);
@@ -17,9 +21,6 @@ int main(void) {
             case 1:
                 count = count + 1;
             printf("Check in!\n");
-            int dob,age, adults[6], children[6], staylength[6], choice[6];
-            float mealtotal[6], roomtotal[6], total;
-            char name1[6][10], name2[10], type[6], paper[6];
             printf("Enter your first name:");
             fflush(stdin);
             gets(name1);
@@ -71,37 +72,37 @@ int main(void) {
             if(rooms[choice[count]-1] == count) {
                 printf("This is booked!");
             }
-            roomtotal[count] =  staylength[count] * rooms[choice[count]-1];
-            rooms[choice[count]-1] = 0;
+                roomtotal[count] =  staylength[count] * rooms[choice[count]-1];
+                rooms[choice[count]-1] = 0;
 
-            for(int i = 0; i < adults[count]; i++) {
-                if(type[count] == 'F' || type[count] == 'f') {
-                    mealtotal[count] += 20;
+                for(int i = 0; i < adults[count]; i++) {
+                    if(type[count] == 'F' || type[count] == 'f') {
+                        mealtotal[count] += 20;
+                    }
+                    else if(type[count] == 'H' || type[count] == 'h') {
+                        mealtotal[count] += 15;
+                    }
+                    else {
+                        mealtotal[count] += 5;
+                    }
                 }
-                else if(type[count] == 'H' || type[count] == 'h') {
-                    mealtotal[count] += 15;
-                }
-                else {
-                    mealtotal[count] += 5;
-                }
-            }
-            for(int i = 0; i < children[count]; i++) {
-                if(type[count] == 'F' || type[count] == 'f') {
-                    mealtotal[count] += 10;
-                }
-                else if(type[count] == 'H' || type[count] == 'h') {
-                    mealtotal[count] += 7.5;
-                }
-                else if(type[count] == 'B' || type[count] == 'b'){
-                    mealtotal[count] += 2.5;
-                }
-                else
-                {
-                    printf("%c is not valid",type[count]);
+                for(int i = 0; i < children[count]; i++) {
+                    if(type[count] == 'F' || type[count] == 'f') {
+                        mealtotal[count] += 10;
+                    }
+                    else if(type[count] == 'H' || type[count] == 'h') {
+                        mealtotal[count] += 7.5;
+                    }
+                    else if(type[count] == 'B' || type[count] == 'b'){
+                        mealtotal[count] += 2.5;
+                    }
+                    else
+                    {
+                        printf("%c is not valid",type[count]);
 
+                    }
                 }
-            }
-            mealtotal[count] = mealtotal[count] * staylength[count];
+                mealtotal[count] = mealtotal[count] * staylength[count];
 
 
             printf("\nYour ID is: %s", name1);

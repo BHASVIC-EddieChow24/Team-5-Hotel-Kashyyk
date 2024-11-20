@@ -50,6 +50,21 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "C:/Program Files (x86)/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeFindCodeBlocks.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files (x86)/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files (x86)/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/ProcessorCount.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "C:/Program Files (x86)/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake"
 		},
 		{
@@ -110,8 +125,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/charlie.benson24/Documents/Team-5-Hotel-Kashyyk/cmake-build-debug",
-		"source" : "C:/Users/charlie.benson24/Documents/Team-5-Hotel-Kashyyk"
+		"build" : "C:/Users/eddie.chow24/OneDrive - BHASVIC/Documents/GitHub/Team-5-Hotel-Kashyyk/cmake-build-debug",
+		"source" : "C:/Users/eddie.chow24/OneDrive - BHASVIC/Documents/GitHub/Team-5-Hotel-Kashyyk"
 	},
 	"version" : 
 	{
