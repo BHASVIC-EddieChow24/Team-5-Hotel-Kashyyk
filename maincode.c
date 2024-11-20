@@ -11,7 +11,7 @@ int main(void) {
     rooms[5] = (50);
     int age, adults[6], children[6], staylength[6], choice[6];
     float mealtotal[6], roomtotal[6], total;
-    char dob[10],name1[6][13], name2[13], type[6], paper[6];
+    char dob[6][10],name1[6][13], name2[6][13], type[6], paper[6];
     while(option == 4) {
         printf("What would you like to do?\nCheck in (1)\nBook a table (2)\nCheck out (3)\nQuit (4)\nAnswer:");
         fflush(stdin);
@@ -40,7 +40,7 @@ int main(void) {
                 printf("Enter your date of birth (ddmmyy):");
                 fflush(stdin);
                 scanf("%d", &dob);
-            }while(strlen(dob)>6);
+            }while(strlen(dob)!=6);
             do {
                 printf("Enter your age:");
                 fflush(stdin);
