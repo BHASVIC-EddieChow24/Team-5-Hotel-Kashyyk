@@ -9,7 +9,7 @@ int main(void) {
     rooms[3] = (75);
     rooms[4] = (75);
     rooms[5] = (50);
-    int dob,age, adults[6], children[6], staylength[6], choice[6];
+    int dd,mm,yy,age, adults[6], children[6], staylength[6], choice[6];
     float mealtotal[6], roomtotal[6], total;
     char name1[6][13], name2[6][13], type[6], paper[6];
     while(option == 4) {
@@ -39,8 +39,8 @@ int main(void) {
             do {
                 printf("Enter your date of birth (ddmmyy):");
                 fflush(stdin);
-                scanf("%d", &dob);
-            }while(dob>1000000||dob<99999);
+                scanf("%d%d%d", &dd,&mm,&yy);
+            }while(dd>31||mm>12||yy>99);
             do {
                 printf("Enter your age:");
                 fflush(stdin);
