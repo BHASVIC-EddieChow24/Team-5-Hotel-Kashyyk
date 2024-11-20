@@ -39,13 +39,9 @@ int main(void) {
             do {
                 printf("Enter your date of birth (ddmmyy):");
                 fflush(stdin);
-<<<<<<< HEAD
                 scanf("%d%d%d", &dd,&mm,&yy);
-            }while(dd>31||mm>12||yy>99);
-=======
-                scanf("%d", &dob);
-            }while(dob>1000000||dob<010100);
->>>>>>> fc3f2cde1aaca70c15a263ba80228718ffdb4647
+            }while(dd>31||mm>12);
+
             do {
                 printf("Enter your age:");
                 fflush(stdin);
