@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/eddie.chow24/OneDrive - BHASVIC/Documents/GitHub/Team-5-Hotel-Kashyyk
+# Install script for directory: C:/Users/charlie.benson24/Documents/Team-5-Hotel-Kashyyk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/eddie.chow24/OneDrive - BHASVIC/Documents/GitHub/Team-5-Hotel-Kashyyk/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/charlie.benson24/Documents/Team-5-Hotel-Kashyyk/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

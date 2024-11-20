@@ -10,9 +10,9 @@ int main(void) {
     rooms[3] = (75);
     rooms[4] = (75);
     rooms[5] = (50);
-    int dob,age, adults[6], children[6], staylength[6], choice[6];
+    int age, adults[6], children[6], staylength[6], choice[6];
     float mealtotal[6], roomtotal[6], total;
-    char name1[6][10], name2[10], type[6], paper[6];
+    char dob[10],name1[6][13], name2[13], type[6], paper[6];
     while(option == 4) {
         printf("What would you like to do?\nCheck in (1)\nBook a table (2)\nCheck out (3)\nQuit (4)\nAnswer:");
         fflush(stdin);
@@ -21,18 +21,32 @@ int main(void) {
             case 1:
                 count = count + 1;
             printf("Check in!\n");
-            printf("Enter your first name:");
-            fflush(stdin);
-            gets(name1);
-            printf("Enter your last name:");
-            fflush(stdin);
-            gets(name2);
-            printf("Enter your date of birth (ddmmyy):");
-            fflush(stdin);
-            scanf("%d", &dob);
-            printf("Enter your age:");
-            fflush(stdin);
-            scanf("%d", &age);
+            do {
+                printf("Enter your first name:");
+                fflush(stdin);
+                gets(name1);
+                if(strlen(name1)>10){
+                    printf("name is tool long\n");
+                }
+            }while(strlen(name1)<1||strlen(name1)>10);
+            do {
+                printf("Enter your last name:");
+                fflush(stdin);
+                gets(name2);
+                if(strlen(name2)>10) {
+                    printf("name is too long\n");
+                }
+            }while(strlen(name2)<1||strlen(name2)>10);
+            do {
+                printf("Enter your date of birth (ddmmyy):");
+                fflush(stdin);
+                scanf("%d", &dob);
+            }while(strlen(dob)>6);
+            do {
+                printf("Enter your age:");
+                fflush(stdin);
+                scanf("%d", &age);
+            }while(age<2||age>120);
             do {
                 printf("How many adults are there? (17 or above):");
                 fflush(stdin);

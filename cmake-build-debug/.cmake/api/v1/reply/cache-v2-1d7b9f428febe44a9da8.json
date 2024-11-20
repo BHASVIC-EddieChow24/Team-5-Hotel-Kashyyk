@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/eddie.chow24/OneDrive - BHASVIC/Documents/GitHub/Team-5-Hotel-Kashyyk/cmake-build-debug"
+			"value" : "c:/Users/charlie.benson24/Documents/Team-5-Hotel-Kashyyk/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -475,7 +475,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/eddie.chow24/OneDrive - BHASVIC/Documents/GitHub/Team-5-Hotel-Kashyyk/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/charlie.benson24/Documents/Team-5-Hotel-Kashyyk/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -547,7 +547,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/eddie.chow24/OneDrive - BHASVIC/Documents/GitHub/Team-5-Hotel-Kashyyk"
+			"value" : "C:/Users/charlie.benson24/Documents/Team-5-Hotel-Kashyyk"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1183,7 +1183,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/eddie.chow24/OneDrive - BHASVIC/Documents/GitHub/Team-5-Hotel-Kashyyk/cmake-build-debug"
+			"value" : "C:/Users/charlie.benson24/Documents/Team-5-Hotel-Kashyyk/cmake-build-debug"
 		},
 		{
 			"name" : "Team_5_Hotel_Kashyyk_IS_TOP_LEVEL",
@@ -1207,7 +1207,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/eddie.chow24/OneDrive - BHASVIC/Documents/GitHub/Team-5-Hotel-Kashyyk"
+			"value" : "C:/Users/charlie.benson24/Documents/Team-5-Hotel-Kashyyk"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
