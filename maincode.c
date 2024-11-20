@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-void calculateprice();
 
 int main(void) {
     int option = 4, rooms[6], count = -1;
@@ -123,17 +122,19 @@ int main(void) {
             scanf("%d", &idnum);
             idnum = idnum/100;
             if(type[idnum] == 'F' || type[idnum] == 'H' || type[idnum] == 'f' || type[idnum] == 'h') {
-                printf("How many people are there?:");
-                fflush(stdin);
-                scanf("%d", &people);
-                if(people>4 || people<1) {
-                    printf("Too many people, sorry we can't book for you.");
-                }
-                else {
+                do {
+                    printf("How many people are there? (maximum 4):");
+                    fflush(stdin);
+                    scanf("%d", &people);
+                }while(people>4 || people<1);
+
+                do {
                     printf("What time would you like to book for? (7 or 9)");
                     fflush(stdin);
                     scanf("%d", &time);
-                    if( time == 7) {
+                }while(time != 7 && time != 9);
+
+                if(time ==7){
                         printf("Would you like to book Tatooine, Naboo, or Endor? (1, 2, or 3):");
                         fflush(stdin);
                         scanf("%d", &tablerequest);
@@ -141,10 +142,7 @@ int main(void) {
                                 tables7[tablerequest-1] = idnum;
                                 printf("Table %d booked for 7", tablerequest);
                             }
-                        else {
-                            printf("This table is not valid, sorry.");
-                        }
-                    }
+                }
                     else if (time == 9) {
                         printf("Would you like to book Tatooine, Naboo, or Endor? (1, 2, or 3):");
                         fflush(stdin);
@@ -161,7 +159,6 @@ int main(void) {
                         printf("Invalid time\n");
                     }
                 }
-            }
             else {
                 printf("You may not book tables as you do not have a half or full board");
             }
@@ -188,7 +185,7 @@ int main(void) {
                  printf("User over 65");
                 total = total * 0.9;
             }
-                printf("\nThe total was %f \n\n", total);
+                printf("\nThe total was £ %f \n\n", total);
 
             option = 4;
             break;
