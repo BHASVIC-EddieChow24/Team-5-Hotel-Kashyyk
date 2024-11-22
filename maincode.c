@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+int namenum();
 int main(void) {
     int option = 4, rooms[6], count = -1;
     rooms[0] = (100);
@@ -9,7 +9,7 @@ int main(void) {
     rooms[3] = (75);
     rooms[4] = (75);
     rooms[5] = (50);
-    int dd,mm,yy,age, adults[6], children[6], staylength[6], choice[6];
+    int dob,age, adults[6], children[6], staylength[6], choice[6];
     float mealtotal[6], roomtotal[6], total;
     char name1[6][13], name2[6][13], type[6], paper[6];
     while(option == 4) {
@@ -21,13 +21,10 @@ int main(void) {
                 count = count + 1;
             printf("Check in!\n");
             do {
-                printf("Enter your first name:");
-                fflush(stdin);
-                gets(name1);
-                if(strlen(name1)>10){
-                    printf("name is too long\n");
-                }
-            }while(strlen(name1)<1||strlen(name1)>10);
+                    printf("Enter your first name:");
+                    fflush(stdin);
+                    gets(name1);
+            }while(strlen(name1)<1||strlen(name1)>10 || name1 >0);
             do {
                 printf("Enter your last name:");
                 fflush(stdin);
@@ -36,11 +33,11 @@ int main(void) {
                     printf("name is too long\n");
                 }
             }while(strlen(name2)<1||strlen(name2)>10);
-            do {
-                printf("Enter your date of birth (ddmmyy):");
-                fflush(stdin);
-                scanf("%d%d%d", &dd,&mm,&yy);
-            }while(dd>31||mm>12);
+
+            printf("Enter your date of birth (ddmmyy):");
+            fflush(stdin);
+            scanf("%d", &dob);
+
 
             do {
                 printf("Enter your age:");
@@ -134,7 +131,7 @@ int main(void) {
                 mealtotal[count] = mealtotal[count] * staylength[count];
 
 
-            printf("\nYour ID is: %s", name1);
+            printf("\nYour ID is: %s", name2);
             printf("%d24\n \n", count);
             option = 4;
             break;
@@ -231,3 +228,7 @@ int main(void) {
 
   return 0;
   }
+
+
+
+
