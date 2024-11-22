@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-int namenum();
 int main(void) {
     int option = 4, rooms[6], count = -1;
     rooms[0] = (100);
@@ -9,7 +8,7 @@ int main(void) {
     rooms[3] = (75);
     rooms[4] = (75);
     rooms[5] = (50);
-    int dob,age, adults[6], children[6], staylength[6], choice[6];
+    int dob,age, adults[6], children[6], staylength[6], choice[6], namenum1;
     float mealtotal[6], roomtotal[6], total;
     char name1[6][13], name2[6][13], type[6], paper[6];
     while(option == 4) {
@@ -21,10 +20,20 @@ int main(void) {
                 count = count + 1;
             printf("Check in!\n");
             do {
+                namenum1 = 0;
                     printf("Enter your first name:");
                     fflush(stdin);
                     gets(name1);
-            }while(strlen(name1)<1||strlen(name1)>10 || name1 >0);
+                if(strlen(name1)<1||strlen(name1)>10 ) {
+                    printf("Name too long or too short, retry.");
+                }
+                for(int i = 0; i<strlen(name1[count]); i++) {
+                    if(name1[count][i]<64) {
+                        namenum1 =  namenum1 + 1;
+                        break;
+                    }
+                }
+            }while(strlen(name1)<1||strlen(name1)>10 || namenum1 >0);
             do {
                 printf("Enter your last name:");
                 fflush(stdin);
