@@ -98,15 +98,17 @@ int main(void) {
                 scanf("%c", &paper[count]);
             }while(paper[count]!='Y'&&paper[count]!='y'&&paper[count]!='N'&&paper[count]!='n');
             printf("\n");
-            for(int i = 0; i < 6; i++){
-                printf("Room %d costs %d:\n", i+1, rooms[i]);
-            }
-            printf("\nA cost of 0 means this rooms is fully booked\nWhich room would you like to book? (1-6):");
-            fflush(stdin);
-            scanf("%d", &choice[count]);
-            if(rooms[choice[count]-1] == count) {
-                printf("This is booked!");
-            }
+            do {
+                for(int i = 0; i < 6; i++){
+                    printf("Room %d costs %d:\n", i+1, rooms[i]);
+                }
+                printf("\nA cost of 0 means this rooms is fully booked\nWhich room would you like to book? (1-6):");
+                fflush(stdin);
+                scanf("%d", &choice[count]);
+                if(rooms[choice[count]-1] == count) {
+                    printf("This is booked!");
+                }
+            }while(choice[count]<1 || choice[count]>6);
                 roomtotal[count] =  staylength[count] * rooms[choice[count]-1];
                 rooms[choice[count]-1] = 0;
 
