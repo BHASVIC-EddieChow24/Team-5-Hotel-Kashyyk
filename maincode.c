@@ -43,10 +43,9 @@ int main(void) {
                 }
             }while(strlen(name2)<1||strlen(name2)>10);
 
-            printf("Enter your date of birth (ddmmyy):");
-            fflush(stdin);
-            scanf("%d", &dob);
-
+                printf("Enter your date of birth (ddmmyy):");
+                fflush(stdin);
+                scanf("%d", &dob);
 
             do {
                 printf("Enter your age:");
@@ -239,7 +238,3 @@ int main(void) {
 
   return 0;
   }
-
-
-
-

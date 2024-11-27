@@ -1,6 +1,7 @@
 # ninja log v6
 125	266	7539785490632822	Team_5_Hotel_Kashyyk.exe	9406a3ce346e3a5e
-62	5812	1732478174909323214	CMakeFiles/Team_5_Hotel_Kashyyk.dir/maincode.c.o	4d38910ca6c98731
-5884	6429	1732478180732129469	Team_5_Hotel_Kashyyk	64db2aef4e6bd539
-30	3084	1732478434032189972	CMakeFiles/Team_5_Hotel_Kashyyk.dir/maincode.c.o	4d38910ca6c98731
 3086	3535	1732478437088048655	Team_5_Hotel_Kashyyk	64db2aef4e6bd539
+8	140	7544003737577229	CMakeFiles/Team_5_Hotel_Kashyyk.dir/maincode.c.obj	1371ad6472e8bcd5
+143	345	7544003738927837	Team_5_Hotel_Kashyyk.exe	9406a3ce346e3a5e
+9	134	7544006485611610	CMakeFiles/Team_5_Hotel_Kashyyk.dir/maincode.c.obj	1371ad6472e8bcd5
+136	317	7544006486884802	Team_5_Hotel_Kashyyk.exe	9406a3ce346e3a5e
