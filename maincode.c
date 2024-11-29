@@ -8,8 +8,16 @@ int main(void) {
     rooms[3] = (75);
     rooms[4] = (75);
     rooms[5] = (50);
+    float  mealtotal[6];
+    mealtotal[0] = (0);
+    mealtotal[1] = (0);
+    mealtotal[2] = (0);
+    mealtotal[3] = (0);
+    mealtotal[4] = (0);
+    mealtotal[5] = (0);
+
     int dob,age, adults[6], children[6], staylength[6], choice[6], namenum1;
-    float mealtotal[6], roomtotal[6], total;
+    float roomtotal[6], total;
     char name1[6][13], name2[6][13], type[6], paper[6];
     while(option == 4) {
         printf("What would you like to do?\nCheck in (1)\nBook a table (2)\nCheck out (3)\nQuit (4)\nAnswer:");
@@ -222,7 +230,7 @@ int main(void) {
                  printf("User over 65");
                 total = total * 0.9;
             }
-                printf("\nThe total was £ %f \n\n", total);
+                printf("\nThe total was %f \n\n", total);
 
             option = 4;
             break;
